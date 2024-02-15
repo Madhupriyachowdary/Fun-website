@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h2 class="question">
+            Will you take me to the Biryani party?
+        </h2>
+        <img class="gif" src="./gphy.gif">
+        <div class="but"><div class="button">
+            <button class="yesbtn">Yes</button>
+            <button class="nobtn">No</button>
+        </div></div>
+    </div>
+
+    <script>
+       const main=document.querySelector(".main");
+       const question=document.querySelector(".question");
+       const gif=document.querySelector(".gif");
+       const yesbtn=document.querySelector(".yesbtn");
+       const nobtn=document.querySelector(".nobtn");
+
+       yesbtn.addEventListener("click",  ()  =>{
+        question.innerHTML="yay, I'll meet you tommorrow then";
+        gif.src="peach-goma.gif";
+       });
+       nobtn.addEventListener("mouseover", () => {
+    const nobtnRect = nobtn.getBoundingClientRect();
+    const maxX = window.innerWidth - nobtnRect.width;
+    const maxY = window.innerHeight - nobtnRect.height;
+
+    const randomX = Math.floor(Math.random() * maxX);
+    const randomY = Math.floor(Math.random() * maxY);
+
+    nobtn.style.left = randomX + "px";
+    nobtn.style.top = randomY + "px";
+});
+
+    
+
+
+    </script>
+</body>
+</html>
